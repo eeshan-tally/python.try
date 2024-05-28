@@ -18,5 +18,5 @@ else:
        factorial = factorial*i
    print("The factorial of",num,"is",factorial)
 
-print ("Eeshan")
+print ("Jeet")
 
