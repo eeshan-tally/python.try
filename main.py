@@ -1,10 +1,10 @@
 #Combination formula
-from  pyfactorial import Assignment1
+from operations import pyfactorial
 
 class Combination :
     def __init__(self):
-        self.n=Assignment1()
-        self.r=Assignment1()
+        self.n=pyfactorial.Assignment1()
+        self.r=pyfactorial.Assignment1()
     def calculate(self):
         self.nvalue=self.n.take_input("Enter the n value")
         self.rvalue=self.r.take_input("Enter the r value")
@@ -16,7 +16,7 @@ class Combination :
             print("Sorry!!, r value is greater than n value ")
         else:
             self.jvalue=self.nvalue - self.rvalue 
-            self.j=Assignment1()
+            self.j=pyfactorial.Assignment1()
             self.j.Factorial(self.jvalue)
             self.storedj=self.j.display_result()
             self.ncr=self.storen // (self.storer * self.storedj )
