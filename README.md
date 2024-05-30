@@ -1,2 +1,2 @@
 # python.try
-Simple Python Code to factorial of a number
+Task1 related work
