@@ -1,22 +1,50 @@
 # Python program to find the factorial of a number provided by the user.
 
-# change the value for a different result
-num = 7
 
-# To take input from the user
-#num = int(input("Enter a number: "))
+class factorialClass:
+   
+#integerInput is a method to invalidate non integer inputs recusrsively until valid integer inputs are provided.
+    
+   def integerInput(self):
+      try:
+            a=int(input())
+      except ValueError:
+            print("Invalid character Enter a valid integer value")
+            a=self.integerInput()
+      return a
+      
 
-factorial = 1
 
-# check if the number is negative, positive or zero
-if num < 0:
-   print("Sorry, factorial does not exist for negative number")
-elif num == 0:
-   print("The factorial of 0 is 1")
-else:
-   for i in range(1,num + 1):
-       factorial = factorial*i
-   print("The factorial of",num,"is",factorial)
+#a method to calculate factorial
+   def calculateFactorial(self,n):
+      factorial=1
+      num=n
+      if num < 0:
+         return 0
+      elif num == 0:
+         return 1
+      else:
+         for i in range(1,num + 1):
+            factorial = factorial*i
+      return factorial                                                        
 
-print ("Jeet")
+      
+
+# method to calculate nCr. 
+   def calculate_nCr(self):
+      print("Enter n")
+      self.n=self.integerInput()     
+      print("Enter r")
+      self.r=self.integerInput()     
+      n=self.n
+      r=self.r
+      nCr=self.calculateFactorial(n)/(self.calculateFactorial(r)*self.calculateFactorial(n-r))
+      return nCr
+
+
+
+# x is an instance of factorialClass
+x=factorialClass()
+ncr=x.calculate_nCr()
+print("nCr is ",ncr)
 
